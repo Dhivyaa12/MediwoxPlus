@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Uploads mock data (doctors and appointments) to AWS DynamoDB using AWS SDK",
+  "main": "insertToDynamo.js",
+  "scripts": {
+    "start": "node insertToDynamo.js",
+    "upload": "node insertToDynamo.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.839.0",
+    "aws-sdk": "^2.1692.0"
+  },
+  "keywords": [
+    "aws",
+    "dynamodb",
+    "mock-data",
+    "lambda",
+    "healthcare"
+  ]
+}
