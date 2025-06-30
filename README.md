@@ -5,9 +5,9 @@
 
 MediWox – Serverless Hospital Management System using AWS
 
-Website link: https://mediwoxpluscit.netlify.app/
+Website link: [https://mediwoxpluscit.netlify.app/](https://mediwoxpluscit.netlify.app)
 
-Youtube link: [https://youtu.be/gtEMD_YExzA](https://youtu.be/so_g4viecxY)
+Youtube link: [https://youtu.be/5fULjUb07is](https://youtu.be/5fULjUb07is?si=kTxywTGWtqi4MJ2B)
 
 Documentation link: [https://docs.google.com/document/d/18m1gfx82t3EQqvSzOZ6kfW5sJ8jePiOk/edit?usp=drive_link&ouid=104216704307757502623&rtpof=true&sd=true](https://docs.google.com/document/d/1L6a8LsBV6Gtpm2Tq55uTWzaLIZaquAWC/edit?usp=sharing&ouid=107307847593022853404&rtpof=true&sd=true)
 
