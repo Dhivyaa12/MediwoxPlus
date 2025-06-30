@@ -9,7 +9,7 @@ Website link: https://mediwoxpluscit.netlify.app/
 
 Youtube link:
 
-Documentation link: 
+Documentation link: https://docs.google.com/document/d/18m1gfx82t3EQqvSzOZ6kfW5sJ8jePiOk/edit?usp=drive_link&ouid=104216704307757502623&rtpof=true&sd=true
 
 
 **INTRODUCTION:**
