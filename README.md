@@ -192,7 +192,7 @@ The Patient Dashboard in MediWox provides a simple platform for facilitating hea
 •	Access Patient Guidelines that have Do's and Don'ts to maintain a safe consultation.
 
 3. Doctor Dashboard:
-
+   
 MediWox Doctor Dashboard is a structured and visual interface for doctors to manage patients' schedule and appointments easily and efficiently.
 
 Key Features:
@@ -205,9 +205,30 @@ Filter Tool: Doctors can only access clinic appointment for their specific speci
 
 Your Schedule: Your specific daily appointments with real-time updates.
 
-4. Descriptions of Lambda Functions:
+4. Booking Flow:
+   
+•	Patient submits form, including type of issue.
 
-4.1. LoginHandler
+•	Data written to DynamoDB.
+
+•	This triggers Lambda to check:
+
+4.1.	 If there is a matching doctor for booking.
+   
+4.2.	 If there is availability to check in.
+	 
+4.3.	 To update the database.
+    
+4.4.	 SNS sends SMS to both users.
+    
+4.5.	 SES sends email to both users.
+    
+   ![image](https://github.com/user-attachments/assets/62053ca7-240e-4faa-8d11-8a282b4b6327)
+ 
+
+5. Descriptions of Lambda Functions:
+
+5.1. LoginHandler
 
 Goal: To authenticate users (patients/doctors) through their email or phone number.
 
@@ -215,7 +236,7 @@ Workflow: If email is not verified, the verification email is sent through Amazo
 
 Security: Only verified or authorized users have access.
 
-4.2. AppointmentHandler
+5.2. AppointmentHandler
 
 Goal: Create a new appointment when a patient submits the form.
 
@@ -223,19 +244,19 @@ Workflow: Pairs the patient with doctors based on availability and specialty.
 
 Actions: Keeps the appointment in DynamoDB. Triggers SNS/SES to notify the doctor and the patient.
 
-4.3. DoctorAppointmentsHandler
+5.3. DoctorAppointmentsHandler
 
 Goal: Retrieve all the appointments that belong to the doctor at that given time.
 
 Use case: This functionality powers the doctor dashboard to display daily appointments filtered by date or specialty.
 
-4.4. backupToS3
+5.4. backupToS3
 
 Goal: To regularly back up critical data from DynamoDB to Amazon S3.
 
 Advantages: Disaster recovery; analytics; secure way to archive healthcare record storage.
 
-4.5. Booking Flow:
+6. Booking Flow:
 
 •	Patient submits form, including type of issue.
 
@@ -243,17 +264,17 @@ Advantages: Disaster recovery; analytics; secure way to archive healthcare recor
 
 •	This triggers Lambda to check:
 
-4.5.1.	 If there is a matching doctor for booking.
+6.1.	 If there is a matching doctor for booking.
 
-4.5.2.	 If there is availability to check in.
+6.2.	 If there is availability to check in.
 
-4.5.3.	 To update the database.
+6.3.	 To update the database.
 
-4.5.4.	 SNS sends SMS to both users.
+6.4.	 SNS sends SMS to both users.
 
-4.5.5.	 SES sends email to both users.
+6.5.	 SES sends email to both users.
  
-5. Daily Archival Flow:
+7. Daily Archival Flow:
    
 •	CloudWatch Event triggers the Lambda.
 
@@ -261,13 +282,15 @@ Advantages: Disaster recovery; analytics; secure way to archive healthcare recor
 
 •	It copies/Moves to S3, for longer-term storage.
 
-6. Overall Workflow
+8. Overall Workflow
  
 MediWox implements a completely serverless cloud-native architecture, which is based on several key AWS services, to improve hospital management practices. The user front end interacts with the Amazon API Gateway acting as a service mesh and returns user requests (for log in, booking, fetching appointments, etc.) to an AWS Lambda functions. The stateless compute service implements the business logic, fetches information from Amazon DynamoDB via the doctors and patients tables, interacts with Amazon SES to send email notifications, including eventually generating an Amazon SNS for SMS messaging. There are a variety of data points concerning appointments that are backed up to Amazon S3, and monitoring will happen via CloudWatch for observability and logging purposes.
 
-7. Descriptions of Lambda Functions:
+![image](https://github.com/user-attachments/assets/f421efa9-abb2-4a7d-b936-874ec7de3580)
 
-7.1. LoginHandler
+9. Descriptions of Lambda Functions:
+
+9.1. LoginHandler
  
 Goal: To authenticate users (patients/doctors) through their email or phone number.
 
@@ -275,7 +298,7 @@ Workflow: If email is not verified, the verification email is sent through Amazo
 
 Security: Only verified or authorized users have access.
 
-7.2. AppointmentHandler
+9.2. AppointmentHandler
  
 Goal: Create a new appointment when a patient submits the form.
 
@@ -283,13 +306,13 @@ Workflow: Pairs the patient with doctors based on availability and specialty.
 
 Actions: Keeps the appointment in DynamoDB. Triggers SNS/SES to notify the doctor and the patient.
 
-7.3. DoctorAppointmentsHandler
+9.3. DoctorAppointmentsHandler
 
 Goal: Retrieve all the appointments that belong to the doctor at that given time.
 
 Use case: This functionality powers the doctor dashboard to display daily appointments filtered by date or specialty.
 
-7.4. backupToS3
+9.4. backupToS3
 
 Goal: To regularly back up critical data from DynamoDB to Amazon S3.
 
