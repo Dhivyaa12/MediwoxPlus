@@ -1,16 +1,18 @@
 # MediwoxPlus
 **Mediwox Plus** is a cloud-based healthcare app using React.js and AWS. It enables doctors and patients to manage appointments via role-based dashboards. AWS Lambda handles serverless data fetching from DynamoDB, with API Gateway support. Features include smart filtering, real-time stats, and specialty-based appointment views.
 
-MediWox – Serverless Hospital Management System using AWS
+MediWoxPlus – Serverless Hospital Management System using AWS
 
-Documentation link: 
+Website link: https://effervescent-chaja-491bb4.netlify.app/
 
 Youtube link:
+
+Documentation link: 
 
 
 INTRODUCTION:
 
-MediWox is a cloud based, full-stack web application that automates healthcare services like, patient registration, appointment booking, and facilitating doctor-patient coordination. Through the use of AWS services in its overall architecture, MediWox provides the user with a secure, reliable, stackable solution, that is serverless, with the changing goals and needs of modern healthcare systems.
+MediWoxPlus is a cloud based, full-stack web application that automates healthcare services like, patient registration, appointment booking, and facilitating doctor-patient coordination. Through the use of AWS services in its overall architecture, MediWox provides the user with a secure, reliable, stackable solution, that is serverless, with the changing goals and needs of modern healthcare systems.
 
 HOW OUR MEDIWOX WEBSITE USED AWS LAMBDA:
 
