@@ -3,6 +3,11 @@
 
 MediWox – Serverless Hospital Management System using AWS
 
+Documentation link: 
+
+Youtube link:
+
+
 INTRODUCTION:
 
 MediWox is a cloud based, full-stack web application that automates healthcare services like, patient registration, appointment booking, and facilitating doctor-patient coordination. Through the use of AWS services in its overall architecture, MediWox provides the user with a secure, reliable, stackable solution, that is serverless, with the changing goals and needs of modern healthcare systems.
@@ -328,6 +333,7 @@ FUTURE SCOPE:
 
 
 CONCLUSION:
+
 The Hospital Management System uses the power of AWS serverless technologies to provide real-time interactivity, massive data processing capabilities, and scalable communication - all without the need for server management. This project shows how cloud services can make healthcare systems more efficient, they are more automated and user-friendly.
 
 
