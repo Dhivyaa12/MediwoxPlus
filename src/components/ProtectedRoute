@@ -1,0 +1,30 @@
+// src/components/ProtectedRoute.tsx
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+
+interface ProtectedRouteProps {
+  children: JSX.Element;
+  allowedRoles?: ('patient' | 'doctor')[];
+}
+
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, allowedRoles }) => {
+  const { user } = useAuth();
+  const location = useLocation();
+
+  // 🛑 Not logged in → redirect to appropriate login page
+  if (!user) {
+    const defaultLogin = allowedRoles?.includes('doctor') ? '/doctor-login' : '/patient-login';
+    return <Navigate to={`${defaultLogin}?redirectTo=${location.pathname}`} replace />;
+  }
+
+  // 🚫 Logged in but unauthorized role → redirect to home
+  if (allowedRoles && !allowedRoles.includes(user.role)) {
+    return <Navigate to="/" replace />;
+  }
+
+  // ✅ Allowed access
+  return children;
+};
+
+export default ProtectedRoute;
