@@ -11,7 +11,7 @@ Youtube link: https://youtu.be/gtEMD_YExzA
 
 Documentation link: https://docs.google.com/document/d/18m1gfx82t3EQqvSzOZ6kfW5sJ8jePiOk/edit?usp=drive_link&ouid=104216704307757502623&rtpof=true&sd=true
 
-**{For Doctor Login credential details are stored in Datamock.js file or mockData.ts file}**
+***IMPORTANT NOTE: **{For Doctor Login credential details are stored in Datamock.js file or mockData.ts file}*****
 
 **INTRODUCTION:**
 
