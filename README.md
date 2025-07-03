@@ -379,3 +379,5 @@ Advantages: Disaster recovery; analytics; secure way to archive healthcare recor
 **CONCLUSION:**
 
 The Hospital Management System uses the power of AWS serverless technologies to provide real-time interactivity, massive data processing capabilities, and scalable communication - all without the need for server management. This project shows how cloud services can make healthcare systems more efficient, they are more automated and user-friendly.
+
+
